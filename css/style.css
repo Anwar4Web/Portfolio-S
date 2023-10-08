@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Start of Header*/
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.banner.night {
+  background: #333;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  top: 3.5%;
+  width: 125px;
+  height: 125px;
+  background: url(./images/dotted.png);
+  background-size: cover;
+  animation: animateColors 10s linear infinite;
+  transition-delay: -5s;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: #333;
+  font-size: 2em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+header .logo span {
+  color: #2196f3;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #333;
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: lime;
+}
+
+/* Start of Content*/
+
+.content {
+  position: relative;
+  max-width: 600px;
+  z-index: 10;
+}
+
+.content h3 {
+  font-size: 1.75em;
+  color: #333;
+  font-weight: 200;
+  transition: 0.5s;
+}
+
+.content h2 {
+  font-size: 4.15em;
+  color: #333;
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+.content h2 span {
+  color: #e91e63;
+}
+
+.content p {
+  font-size: 1.2em;
+  color: #666;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.content button {
+  position: relative;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  font-size: 1.15em;
+  letter-spacing: 0.05em;
+  margin-right: 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.content button.contact {
+  background: transparent;
+  color: #333;
+}
+
+.content button.contact ion-icon {
+  position: relative;
+  top: 5px;
+  color: #e91e63;
+  font-size: 1.5em;
+}
+
+/*Start of Social Icon*/
+.social {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  text-decoration: none;
+  font-size: 1.75em;
+  color: #333;
+}
+
+.social li a:hover {
+  color: #2196f3;
+}
+
+/*Start of Dark Mode*/
+
+.darkmode {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 1.85em;
+}
+
+.banner.night .darkmode {
+  background: #444;
+  color: #fff;
+}
+
+.darkmode ion-icon:nth-child(2),
+.banner.night .darkmode ion-icon:nth-child(1) {
+  display: none;
+}
+
+.banner.night .darkmode ion-icon:nth-child(2) {
+  display: block;
+}
+
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content p,
+.banner.night .content button.contact,
+.banner.night .social li a,
+.banner.night nav ul li a {
+  color: #fff;
+}
+
+.banner.night nav ul li a:hover {
+  color: #fd562a;
+}
+
+.banner.night .social li a:hover {
+  color: #2196f3;
+}
+
+/*Start of Animation*/
+
+.colors {
+  position: absolute;
+  right: 0;
+  max-width: 600px;
+  animation: animateColors 8s ease-in-out infinite;
+}
+
+@keyframes animateColors {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(80px);
+  }
+}
+
+.me {
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  max-height: 75vh;
+  animation: animateMe 8s ease-in-out infinite;
+}
+
+@keyframes animateMe {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+}

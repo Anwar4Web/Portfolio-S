@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./images/icon.png" />
+    <title>Anwar's Portfolio</title>
+  </head>
+
+  <body>
+    <section class="banner">
+      <header>
+        <a href="#" class="logo"><span>Anwar</span>HSagor_</a>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="content">
+        <h3>Hey_</h3>
+        <h2>I am <span id="name"></span></h2>
+        <p>
+          I am an aspiring junior web designer and developer. I try to work hard
+          to solve any problem I face. Besides coding, reading books and
+          watching movies are two of my favorite past-times.
+        </p>
+
+        <button>Download CV</button>
+        <button class="contact">
+          <ion-icon name="chatbubbles-outline"></ion-icon> Contact Me
+        </button>
+      </div>
+
+      <img src="./images/colors.png" alt="bg" class="colors" />
+      <img src="./images/me.png" alt="me" class="me" />
+
+      <ul class="social">
+        <li>
+          <a href="https://www.facebook.com/Anwar4Web"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/Anwar4Web"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com/Anwar4Web"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/Anwar4Web"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+
+      <div class="darkmode">
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-icon name="sunny-outline"></ion-icon>
+      </div>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+      let typingText = new Typed("#name", {
+        strings: ["Anwar", "a Coder", "a Designer", "a Developer"],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+      });
+
+      let banner = document.querySelector(".banner");
+      let darkmode = document.querySelector(".darkmode");
+      darkmode.onclick = function () {
+        banner.classList.toggle("night");
+      };
+    </script>
+  </body>
+</html>
